@@ -1,0 +1,8 @@
+*.bag filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+src/yahboomcar_mediapipe/scripts/file/shape_predictor_68_face_landmarks.dat filter=lfs diff=lfs merge=lfs -text
+src/yahboomcar_visual/detection/frozen_inference_graph.pb filter=lfs diff=lfs merge=lfs -text

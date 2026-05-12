@@ -1,0 +1,8 @@
+prefix=/home/yahboom/yahboomcar_ws/devel
+
+Name: yahboomcar_gazebo
+Description: Description of yahboomcar_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

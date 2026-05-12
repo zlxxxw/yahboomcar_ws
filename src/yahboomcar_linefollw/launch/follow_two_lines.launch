@@ -1,0 +1,23 @@
+<launch>
+    <arg name="VideoSwitch" default="false"/>
+    <arg name="img_flip" default="false"/>
+    <arg name="lidar_type" value="$(env RPLIDAR_TYPE)" doc="lidar_type [a1,4ROS]"/>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" if="$(eval arg('lidar_type') == 'a1')"/>
+    <include file="$(find yahboomcar_ctrl)/launch/yahboom_joy.launch"/>
+    <include file="$(find yahboomcar_bringup)/launch/yahboomcar.launch"/>
+    <include file="$(find usb_cam)/launch/usb_cam-test.launch" unless="$(arg VideoSwitch)"/>
+
+    <group if="$(eval arg('lidar_type') == 'a1')">
+        <node name="TwoLineCenterFollower" pkg="yahboomcar_linefollw" type="follow_two_lines_a1.py" output="screen" required="true">
+            <param name="img_flip" type="bool" value="$(arg img_flip)"/>
+            <param name="VideoSwitch" type="bool" value="$(arg VideoSwitch)"/>
+            <param name="show_gui" type="bool" value="$(arg show_gui)"/>
+            <remap from="/usb_cam/image_raw/compressed" to="/usb_cam/image_raw/compressed"/>
+        </node>
+    </group>
+
+
+
+</launch>
+
+

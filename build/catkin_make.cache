@@ -1,0 +1,2 @@
+yahboomcar_astra:yahboomcar_bringup:yahboomcar_ctrl:yahboomcar_description:yahboomcar_gazebo:yahboomcar_laser:yahboomcar_linefollw:yahboomcar_mediapipe:yahboomcar_msgs:yahboomcar_multi:yahboomcar_nav:yahboomcar_slam:yahboomcar_visual:yahboomcar_voice_ctrl:yahboomcar_yolov4_tiny:yahboomcar_yolov5
+-DCATKIN_DEVEL_PREFIX=/home/yahboom/yahboomcar_ws/devel -DCMAKE_INSTALL_PREFIX=/home/yahboom/yahboomcar_ws/install -G Unix Makefiles
